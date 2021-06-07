@@ -1,0 +1,28 @@
+﻿<Window x:Class="laba2_apl_ex3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laba2_apl_ex3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="378" Width="527">
+    <Grid>
+        <Label x:Name="label" Content="Login" HorizontalAlignment="Stretch" VerticalAlignment="Top" FontSize="36" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="user_log" Margin="0,121,0,0" TextWrapping="Wrap" FontSize="20" HorizontalContentAlignment="Left" Background="White" HorizontalAlignment="Center" Width="226" Height="32" VerticalAlignment="Top" TextChanged="user_log_TextChanged"/>
+        <Label x:Name="label1" Content="Username" Margin="188,73,188,0" VerticalAlignment="Top" Height="34" Width="142" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Top"/>
+        <Label x:Name="label2" Content="Password" Margin="188,162,188,0" Width="142" FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="35" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="pass_log" HorizontalAlignment="Center" Margin="0,211,0,0" Width="226" FontSize="20" Height="32" VerticalAlignment="Top" KeyDown="pass_log_KeyDown"/>
+        <Button x:Name="log_button" Content="Увійти" HorizontalAlignment="Right" Margin="0,0,21,20" VerticalAlignment="Bottom" Height="33" Width="85" HorizontalContentAlignment="Center" Click="log_button_Click"/>
+        <Image x:Name="img_done" HorizontalAlignment="Right" Margin="0,151,40,0" Width="50" Source="/Res/done.png" Visibility="Visible" Height="47" VerticalAlignment="Top"/>
+
+        <Image x:Name="img_err" HorizontalAlignment="Right" Margin="0,151,41,0" Width="50" Source="/Res/err.png" Panel.ZIndex="0"
+               Visibility="Visible" Height="46" VerticalAlignment="Top"/>
+        <Label x:Name="none_log" Content="Введіть логін!" HorizontalAlignment="Center" Margin="0,256,0,0" Height="37"
+               VerticalAlignment="Top" Width="226" HorizontalContentAlignment="Center" Foreground="#FFF90000" FontSize="18"
+               Visibility="Hidden"/>
+        <Label x:Name="none_pass" Content="Введіть пароль!" HorizontalAlignment="Center" Margin="0,256,0,0" Height="37"
+               VerticalAlignment="Top" Width="226" HorizontalContentAlignment="Center" Foreground="#FFF90000" FontSize="18"
+               Visibility="Hidden"/>
+
+    </Grid>
+</Window>

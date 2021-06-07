@@ -1,0 +1,57 @@
+﻿<Window x:Class="laba2_apl_ex2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laba2_apl_ex2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="342" Width="331">
+    <StackPanel Orientation="Vertical" Background="#FF979797">
+        <Border BorderBrush="Black" BorderThickness="1" Margin="20">
+            <Grid Width="250" Margin="0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="170" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+
+                <!-- the form labels -->
+                <Label Grid.Row="0" Grid.Column="0" Content="Choose first number:" HorizontalContentAlignment="Right" FontStyle="Italic" />
+                <Label Grid.Row="1" Grid.Column="0" Content="Choose second number:" HorizontalContentAlignment="Right" FontStyle="Italic" />
+
+                <!-- the text boxes for the form -->
+                <TextBox Name="txtNumber1" Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Width="50" HorizontalAlignment="Left" Margin="5" />
+                <TextBox Name="txtNumber2" Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Width="50" HorizontalAlignment="Left" Margin="5" />
+
+            </Grid>
+        </Border>
+
+        <StackPanel Orientation="Horizontal" Width="283" HorizontalAlignment="Stretch">
+            <Button x:Name="btnAdd" Margin="0,0,20,0" Content="+" Width="30" Click="btnOperator" />
+            <Button x:Name="btnSubtract" Margin="0,0,20,0" Content="-" Width="30" Click="btnOperator" />
+            <Button x:Name="btnMultiply" Margin="0,0,20,0" Content="X" Width="30" Click="btnOperator" />
+            <Button x:Name="btnDivide" Margin="0,0,20,0" Content="/" Width="30" Click="btnOperator" />
+            <Button x:Name="btnRoot" Margin="0,0,20,0" Content="a√b" Width="30" Click="btnOperator" />
+            <Button x:Name="btnStep" Margin="0,0,20,0" Content="aᵇ" Width="30" Click="btnOperator" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Height="21" Width="284" Margin="0,10,0,0">
+            <Button x:Name="btnlog"  Width="39" Click="btnOperator">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="log" />
+                    <TextBlock Text="a" FontSize="8" VerticalAlignment="Bottom" Margin="0,0,0,-2"/>
+                    <TextBlock Text="b" />
+                </StackPanel>               
+            </Button>
+            <Button x:Name="btnmod" Content="%" Margin="11,0,0,0" Width="30" Click="btnOperator" />
+        </StackPanel>
+        
+        <Label Content="Hidden initially" Width="200" Height="30" 
+               FontWeight="Bold" Foreground="Black"
+               Visibility="Collapsed" Name="lblAnswer" Margin="0,10,0,20" HorizontalContentAlignment="Center" HorizontalAlignment="Center" />
+    </StackPanel>
+</Window>
